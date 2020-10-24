@@ -14,15 +14,13 @@ public class PlayerService {
     public PlayerService(PlayerRepository playerRepository) {
         this.playerRepository = playerRepository;
     }
-    
+
     public List<Player> findAll(){
         return playerRepository.findAll();
     }
 
     public Optional<Player> findById(Long id){
-        return playerRepository.findAll().stream()
-                .filter(player->player.getId()==id)
-                .findFirst();
+        return playerRepository.findById(id);
     }
 
     public Player savePlayer(Player player){
