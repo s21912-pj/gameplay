@@ -11,6 +11,7 @@ import java.util.Optional;
 public class PlayerService {
 
     private PlayerRepository playerRepository;
+
     public PlayerService(PlayerRepository playerRepository) {
         this.playerRepository = playerRepository;
     }
@@ -25,5 +26,9 @@ public class PlayerService {
 
     public Player savePlayer(Player player){
         return playerRepository.save(player);
+    }
+
+    public List<Player> batchSave(List<Player> players){
+        return playerRepository.saveAll(players);
     }
 }
