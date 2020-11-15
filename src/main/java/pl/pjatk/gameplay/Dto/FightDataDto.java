@@ -1,13 +1,21 @@
-package pl.pjatk.gameplay.model;
+package pl.pjatk.gameplay.Dto;
 
 
-import java.util.List;
-
-public class Damage {
+public class FightDataDto {
     private Long attackerId;
     private Long receiverId;
     private int damagePoint;
-    List<Player> players;
+    private int mana;
+
+    public FightDataDto() {
+    }
+
+    public FightDataDto(Long attackerId, Long receiverId, int damagePoint, int mana) {
+        this.attackerId = attackerId;
+        this.receiverId = receiverId;
+        this.damagePoint = damagePoint;
+        this.mana = mana;
+    }
 
     public Long getAttackerId() {
         return attackerId;
@@ -33,11 +41,11 @@ public class Damage {
         this.damagePoint = damagePoint;
     }
 
-    public List<Player> getPlayers() {
-        return players;
+    public int getMana() {
+        return mana;
     }
 
-    public void setPlayers(List<Player> players) {
-        this.players = players;
+    public void setMana(int mana) {
+        this.mana = mana;
     }
 }
