@@ -1,22 +1,26 @@
-package pl.pjatk.gameplay.model;
+package pl.pjatk.gameplay.Dto;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
 
-@Entity
-public class Player {
-    @Id@GeneratedValue
+
+public class PlayerDto {
     private Long id;
     private String name;
     private int hp;
     private int attack;
     private int mana;
 
-    public Player() {
+    public PlayerDto() {
     }
 
-    public Player(String name, int hp, int attack, int mana) {
+    public PlayerDto(Long id, String name, int hp, int attack, int mana) {
+        this.id = id;
+        this.name = name;
+        this.hp = hp;
+        this.attack = attack;
+        this.mana = mana;
+    }
+
+    public PlayerDto(String name, int hp, int attack, int mana) {
         this.name = name;
         this.hp = hp;
         this.attack = attack;
