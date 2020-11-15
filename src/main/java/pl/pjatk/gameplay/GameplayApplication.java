@@ -3,7 +3,7 @@ package pl.pjatk.gameplay;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SpringBootApplication(scanBasePackages = {"pl.pjatk.gameplay.*"})
+@SpringBootApplication
 public class GameplayApplication {
 
 	public static void main(String[] args) {
